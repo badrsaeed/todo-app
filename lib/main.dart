@@ -1,9 +1,12 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/screens/main_layout.dart';
 
+import 'bloc_observe.dart';
+
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
+  Bloc.observer = MyBlocObserver();
   runApp(MyApp());
 }
 
